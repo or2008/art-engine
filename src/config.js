@@ -12,9 +12,9 @@ const layersDir = path.join(basePath, "/layers");
  * General Generator Options
  ***********************/
 
-const description =
-  "This is the description of your NFT project, remember to replace this";
-const baseUri = "ipfs://NewUriToReplace";
+ const description = "Happy Birthday Kongs is a collection of 10k randomly generated NFTs on the Ethereum blockchain.";
+ const baseUri = "ipfs://QmUosHRZZ8hoXjWjYBbYYRKmtk8gnW6T6FHLx6JXWyoo89";
+ const unrevealedImageUri = "ipfs://QmUosHRZZ8hoXjWjYBbYYRKmtk8gnW6T6FHLx6JXWyoo89";
 
 const outputJPEG = false; // if false, the generator outputs png's
 
@@ -25,34 +25,33 @@ const outputJPEG = false; // if false, the generator outputs png's
 const startIndex = 0;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 1024,
+  height: 1024,
   smoothing: true, // set to false when up-scaling pixel art.
 };
 
 const background = {
-  generate: true,
+  generate: false,
   brightness: "80%",
 };
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 10,
-    namePrefix: "Series 2", // Use to add a name to Metadata `name:`
+    growEditionSizeTo: 10000,
+    namePrefix: "Kong", // Use to add a name to Metadata `name:`
     layersOrder: [
       { name: "Background" },
       {
-        name: "Back Accessory",
+        name: "Skins",
         // options: {
         //   bypassDNA: true,
         // },
       },
-      { name: "Head" },
-      { name: "Clothes" },
+      { name: "Mouth" },
       { name: "Eyes" },
-      { name: "Hair" },
-      { name: "Head Accessory" },
-      { name: "Shirt Accessories" },
+      { name: "Top" },
+      { name: "Cakes" },
+      { name: "Candles" },
     ],
   },
   // {
@@ -199,4 +198,5 @@ module.exports = {
   traitValueOverrides,
   uniqueDnaTorrance,
   useRootTraitType,
+  unrevealedImageUri
 };
