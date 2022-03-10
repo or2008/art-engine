@@ -19,7 +19,8 @@ const loadImg = async (_img) => {
 
 // read image paths
 const imageList = [];
-const rawdata = fs.readdirSync(imageDir).forEach((file) => {
+const images = fs.readdirSync(imageDir).sort(() => Math.random() - Math.random()).slice(0, preview_gif.numberOfImages) // pick random images
+const rawdata = images.forEach((file) => {
   imageList.push(loadImg(`${imageDir}/${file}`));
 });
 

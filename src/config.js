@@ -166,11 +166,11 @@ const preview = {
 };
 
 const preview_gif = {
-  numberOfImages: 5,
+  numberOfImages: 15,
   order: "ASC", // ASC, DESC, MIXED
   repeat: 0,
   quality: 100,
-  delay: 500,
+  delay: 250,
   imageName: "preview.gif",
 };
 
